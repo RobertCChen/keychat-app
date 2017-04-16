@@ -1,5 +1,7 @@
 # keychat
 
+Built starting from the Angular Meteor template [here](https://angular-meteor.com/tutorials/whatsapp/meteor/bootstrapping)
+
 ## TODOs
 
  0. Try to use libkeybase-js
