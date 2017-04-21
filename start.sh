@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
 
-cd src/
+scriptdir=$(cd $(dirname $0); pwd -P)
+
+cd $scriptdir/src/
 meteor
