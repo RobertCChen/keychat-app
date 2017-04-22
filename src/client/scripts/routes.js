@@ -1,9 +1,9 @@
 import { Config } from 'angular-ecmascript/module-helpers';
- 
+
 import chatsTemplateUrl from '../templates/chats.html';
 import chatTemplateUrl from '../templates/chat.html';
 import tabsTemplateUrl from '../templates/tabs.html';
- 
+
 export default class RoutesConfig extends Config {
   configure() {
     this.$stateProvider
@@ -30,10 +30,9 @@ export default class RoutesConfig extends Config {
           }
         }
       });
- 
+
     this.$urlRouterProvider.otherwise('tab/chats');
   }
 }
- 
-RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
+RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];

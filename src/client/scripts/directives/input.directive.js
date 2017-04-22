@@ -1,12 +1,12 @@
 import { Directive } from 'angular-ecmascript/module-helpers';
- 
+
 export default class InputDirective extends Directive {
   constructor() {
     super(...arguments);
- 
+
     // TODO: what is this?
     this.restrict = 'E';
- 
+
     // TODO: what is this?
     this.scope = {
       'returnClose': '=',
@@ -15,32 +15,32 @@ export default class InputDirective extends Directive {
       'onBlur': '&'
     };
   }
- 
+
   link(scope, element) {
     element.bind('focus', (e) => {
       if (!scope.onFocus) return;
- 
+
       this.$timeout(() => {
         scope.onFocus();
       });
     });
- 
+
     element.bind('blur', (e) => {
       if (!scope.onBlur) return;
- 
+
       this.$timeout(() => {
         scope.onBlur();
       });
     });
- 
+
     element.bind('keydown', (e) => {
       // TODO: wtf???
       if (e.which != 13) return;
- 
+
       if (scope.returnClose) {
         element[0].blur();
       }
- 
+
       if (scope.onReturn) {
         this.$timeout(() => {
           scope.onReturn();
@@ -49,6 +49,6 @@ export default class InputDirective extends Directive {
     });
   }
 }
- 
+
 InputDirective.$name = 'input';
 InputDirective.$inject = ['$timeout'];

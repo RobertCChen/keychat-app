@@ -3,11 +3,10 @@ import { Meteor } from 'meteor/meteor';
 import { Chats, Messages } from '../lib/collections';
 
 Meteor.startup(function() {
-
   if (Chats.find().count() !== 0) return;
- 
+
   Messages.remove({});
- 
+
   const messages = [
     {
       text: 'You on your way?',
@@ -30,11 +29,11 @@ Meteor.startup(function() {
       timestamp: Moment().subtract(2, 'weeks').toDate()
     }
   ];
- 
+
   messages.forEach((m) => {
     Messages.insert(m);
   });
- 
+
   const chats = [
     {
       name: 'Ethan Gonzalez',
@@ -57,7 +56,7 @@ Meteor.startup(function() {
       picture: 'https://randomuser.me/api/portraits/thumb/men/2.jpg'
     }
   ];
- 
+
   chats.forEach((chat) => {
     const message = Messages.findOne({ chatId: { $exists: false } });
     chat.lastMessage = message;
@@ -65,5 +64,4 @@ Meteor.startup(function() {
     // Set the message's ID to the chat's ID that it's part of?
     Messages.update(message._id, { $set: { chatId } });
   });
-
 });
