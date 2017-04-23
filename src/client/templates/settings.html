@@ -1,0 +1,13 @@
+<ion-view view-title="Settings">
+  <ion-content class="settings">
+    <div class="list username">
+      <label class="item item-input">
+        <b>Username:</b>&nbsp;{{ $root.currentUser.username }}
+      </label>
+    </div>
+
+    <div class="padding text-center">
+      <button ng-click="settings.logout()" class="button button-clear button-assertive">Logout</button>
+    </div>
+  </ion-content>
+</ion-view>

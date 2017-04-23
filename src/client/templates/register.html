@@ -1,0 +1,24 @@
+<ion-view title="Register an account">
+  <ion-nav-buttons side="right">
+    <!--<button ng-click="register.register()" ng-disabled="(!register.username || register.username.length === 0) || (!register.password || register.password.length === 0) || (!register.passwordagain || register.passwordagain.length == 0) || register.password != register.passwordagain" class="button button-clear button-positive">Done</button>-->
+  </ion-nav-buttons>
+  <ion-content class="register">
+    <div class="text-center instructions">
+      Please enter your username and password
+    </div>
+    <div class="list">
+      <label class="item item-input">
+        <input ng-model="register.username" type="text" placeholder="Your username">
+      </label>
+      <label class="item item-input">
+        <input ng-model="register.password" type="password" placeholder="Your password">
+      </label>
+      <label class="item item-input">
+        <input ng-model="register.passwordagain" type="password" placeholder="Retype your password">
+      </label>
+    </div>
+    <div class="padding text-center">
+      <button ng-click="register.register()" ng-disabled="(!register.username || register.username.length === 0) || (!register.password || register.password.length === 0) || (!register.passwordagain || register.passwordagain.length == 0) || register.password != register.passwordagain" class="button button-clear button-assertive">Register</button>
+    </div>
+  </ion-content>
+</ion-view>

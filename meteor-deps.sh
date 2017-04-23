@@ -32,3 +32,10 @@ meteor add fourseven:scss
 meteor npm install angular-moment --save
 
 meteor add check
+
+# Step 5 (modified from phone-based auth to password-based auth)
+meteor add accounts-password
+meteor npm install angular-meteor-auth
+
+meteor npm install --save bcrypt
+
