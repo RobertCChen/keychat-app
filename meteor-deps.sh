@@ -41,3 +41,7 @@ meteor npm install --save bcrypt
 
 # Step 6
 meteor remove insecure
+
+# Step 7
+meteor remove autopublish
+meteor add reywood:publish-composite

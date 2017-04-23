@@ -1,4 +1,5 @@
 import { _ } from 'meteor/underscore';
+import { Meteor } from 'meteor/meteor';
 import { Config, Runner } from 'angular-ecmascript/module-helpers';
 
 import chatsTemplateUrl from '../templates/chats.html';
@@ -26,7 +27,10 @@ class RoutesConfig extends Config {
         // Also, I suppose that since this is an 'abstract' state, the other states like
         // 'tab.chats' will also wait?
         resolve: {
-          user: this.isAuthorized
+          user: this.isAuthorized,
+          chats() {
+            return Meteor.subscribe('chats');
+          }
         }
       })
       .state('tab.chats', { // TODO: naming again
