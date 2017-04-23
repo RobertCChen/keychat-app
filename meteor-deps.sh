@@ -39,3 +39,5 @@ meteor npm install angular-meteor-auth
 
 meteor npm install --save bcrypt
 
+# Step 6
+meteor remove insecure

@@ -1,9 +1,33 @@
-import Moment from 'moment';
+//import Moment from 'moment';
 import { Meteor } from 'meteor/meteor';
-import { Chats, Messages } from '../lib/collections';
+//import { Chats, Messages } from '../lib/collections';
+import { Accounts } from 'meteor/accounts-base';
 
 Meteor.startup(function() {
-  if (Chats.find().count() !== 0) return;
+  if (Meteor.users.find().count() != 0) return;
+ 
+  Accounts.createUser({
+    username: 'simba',
+    profile: {
+      name: 'Simba'
+    }
+  });
+ 
+  Accounts.createUser({
+    username: 'momo',
+    profile: {
+      name: 'Momo'
+    }
+  });
+ 
+  Accounts.createUser({
+    username: 'nwabudike',
+    profile: {
+      name: 'Nwabudike'
+    }
+  });
+
+  /*if (Chats.find().count() !== 0) return;
 
   Messages.remove({});
 
@@ -63,5 +87,5 @@ Meteor.startup(function() {
     const chatId = Chats.insert(chat);
     // Set the message's ID to the chat's ID that it's part of?
     Messages.update(message._id, { $set: { chatId } });
-  });
+  });*/
 });

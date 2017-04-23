@@ -14,7 +14,7 @@
         <input ng-model="register.password" type="password" placeholder="Your password">
       </label>
       <label class="item item-input">
-        <input ng-model="register.passwordagain" type="password" placeholder="Retype your password">
+        <input ng-model="register.passwordagain" on-return="register.register()" type="password" placeholder="Retype your password">
       </label>
     </div>
     <div class="padding text-center">
