@@ -33,15 +33,18 @@ meteor npm install angular-moment --save
 
 meteor add check
 
-# Step 5 (modified from phone-based auth to password-based auth)
+# Step 5: (modified from phone-based auth to password-based auth)
 meteor add accounts-password
 meteor npm install angular-meteor-auth
 
 meteor npm install --save bcrypt
 
-# Step 6
+# Step 6:
 meteor remove insecure
 
-# Step 7
+# Step 7:
 meteor remove autopublish
 meteor add reywood:publish-composite
+
+# Step 8:
+meteor add okland:camera-ui
