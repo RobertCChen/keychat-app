@@ -11,7 +11,7 @@ export default class ProfileCtrl extends Controller {
   }
 
   updatePicture () {
-    // TODO: Fix scaling (camera takes 4:3 picture but we return 1:1) 
+    // TODO: Fix scaling (camera might takes 4:3 picture but we always return 1:1) 
     MeteorCameraUI.getPicture({ width: 60, height: 60, quality: 70}, (err, data) => {
       if (err) return this.handleError(err);
  

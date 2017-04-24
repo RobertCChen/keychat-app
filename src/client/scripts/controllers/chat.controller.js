@@ -25,6 +25,7 @@ export default class ChatCtrl extends Controller {
   }
 
   sendPicture() {
+    // TODO: Camera is still active after picture is taken
     MeteorCameraUI.getPicture({}, (err, data) => {
       if (err) return this.handleError(err);
  
