@@ -2,6 +2,16 @@
 
 Built starting from the Angular Meteor template [here](https://angular-meteor.com/tutorials/whatsapp/meteor/bootstrapping)
 
+To install dependencies:
+
+    meteor npm install
+
+To run:
+
+    meteor
+
+...the app will be running on [localhost:3000](http://localhost:3000).
+
 ## TODOs
 
  0. Try to use libkeybase-js
