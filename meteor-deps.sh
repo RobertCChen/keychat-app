@@ -8,34 +8,34 @@ meteor remove blaze-html-templates
 meteor add angular-templates
 
 meteor add dab0mb:ionic-assets
-meteor npm install angular@^1.5.8 --save
-meteor npm install angular-animate@^1.5.8 --save
-meteor npm install angular-sanitize@^1.5.8 --save
-meteor npm install angular-ui-router@^0.3.1 --save
-meteor npm install ionic-scripts --save
-meteor npm install babel-runtime --save
+meteor npm install --save angular@^1.5.8
+meteor npm install --save angular-animate@^1.5.8
+meteor npm install --save angular-sanitize@^1.5.8
+meteor npm install --save angular-ui-router@^0.3.1
+meteor npm install --save ionic-scripts
+meteor npm install --save babel-runtime
 
 meteor add mobile-status-bar
 meteor add launch-screen
 
-meteor npm install angular-meteor --save
+meteor npm install --save angular-meteor
 
 # Step 2:
-meteor npm install angular-ecmascript --save
-meteor npm install moment --save
+meteor npm install --save angular-ecmascript
+meteor npm install --save moment
 meteor add fourseven:scss
 
 # Step 3:
 # (Nothing)
 
 # Step 4:
-meteor npm install angular-moment --save
+meteor npm install --save angular-moment
 
 meteor add check
 
 # Step 5: (modified from phone-based auth to password-based auth)
 meteor add accounts-password
-meteor npm install angular-meteor-auth --save
+meteor npm install --save angular-meteor-auth
 
 meteor npm install --save bcrypt
 
