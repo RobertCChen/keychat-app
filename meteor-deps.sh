@@ -35,7 +35,7 @@ meteor add check
 
 # Step 5: (modified from phone-based auth to password-based auth)
 meteor add accounts-password
-meteor npm install angular-meteor-auth
+meteor npm install angular-meteor-auth --save
 
 meteor npm install --save bcrypt
 
@@ -53,3 +53,4 @@ meteor add okland:camera-ui
 
 # WARNING: This did not seem to change anything in .meteor so might need to reinstall it later?
 meteor npm install --save scrypt
+meteor npm install --save meteor-node-stubs
