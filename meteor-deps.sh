@@ -51,6 +51,6 @@ meteor add okland:camera-ui
 
 # ----- Keychat dev starts here -------
 
-# WARNING: This did not seem to change anything in .meteor so might need to reinstall it later?
-meteor npm install --save scrypt
+meteor npm install -g --save node-gyp
 meteor npm install --save meteor-node-stubs
+meteor npm install --save scrypt
