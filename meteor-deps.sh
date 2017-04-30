@@ -48,3 +48,8 @@ meteor add reywood:publish-composite
 
 # Step 8:
 meteor add okland:camera-ui
+
+# ----- Keychat dev starts here -------
+
+# WARNING: This did not seem to change anything in .meteor so might need to reinstall it later?
+meteor npm install --save scrypt
