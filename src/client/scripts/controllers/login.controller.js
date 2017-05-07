@@ -1,7 +1,7 @@
 import { _ } from 'meteor/underscore';
 import { Accounts } from 'meteor/accounts-base';
 import { Controller } from 'angular-ecmascript/module-helpers';
-import scrypt from 'js-scrypt';
+import scrypt from 'scryptsy';
  
 export default class LoginCtrl extends Controller {
   login() {
@@ -11,16 +11,12 @@ export default class LoginCtrl extends Controller {
     // Yaaaay! This seems to work!
     // TODO: Tune the scrypt parameters to be the same as Keybase's
     // (see https://www.npmjs.com/package/js-scrypt)
-    var options = {
-      cost: 32768,
-      blockSize: 8,
-      parallel: 1,
-      size: 256
-    };
-    //var resultBuffer =
-    scrypt.hash('pwd', 'salt', options, function(err, resultBuffer) {
-      this.$log.info('scrypt: ' + resultBuffer);
-    });
+    var N = 32768;
+    var r = 8;
+    var p = 1;
+    var len = 256;
+    var resultBuffer = scrypt('paswd', 'salt', N, r, p, len);
+    this.$log.info('scrypt: ' + resultBuffer);
  
     // TODO: derive pdpka4 and 5 from scrypt(password)
     // TODO: send HTTPS POST request w/ username and pdkpa's

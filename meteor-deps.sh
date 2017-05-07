@@ -58,5 +58,7 @@ meteor add okland:camera-ui
 
 # NOWORKIE
 #meteor npm install --save scrypt-hash
+#meteor npm install --save js-scrypt
 
-meteor npm install --save js-scrypt
+meteor npm install --save scryptsy
+
