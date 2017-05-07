@@ -11,8 +11,16 @@ export default class LoginCtrl extends Controller {
     // Yaaaay! This seems to work!
     // TODO: Tune the scrypt parameters to be the same as Keybase's
     // (see https://www.npmjs.com/package/js-scrypt)
-    var resultBuffer = scrypt.hashSync('pwd', 'salt');
-    this.$log.info('scrypt: ' + resultBuffer);
+    var options = {
+      cost: 32768,
+      blockSize: 8,
+      parallel: 1,
+      size: 256
+    };
+    //var resultBuffer =
+    scrypt.hash('pwd', 'salt', options, function(err, resultBuffer) {
+      this.$log.info('scrypt: ' + resultBuffer);
+    });
  
     // TODO: derive pdpka4 and 5 from scrypt(password)
     // TODO: send HTTPS POST request w/ username and pdkpa's
