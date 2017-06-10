@@ -15,6 +15,8 @@ To run:
 ## TODOs
 
  0. Try to use libkeybase-js
+ 1. Firefox without CORS [here](https://stackoverflow.com/questions/17711924/disable-cross-domain-web-security-in-firefox)
+    + Use [extesion](https://addons.mozilla.org/en-US/firefox/addon/cross-domain-cors/)
 
 ## Roadmap
 

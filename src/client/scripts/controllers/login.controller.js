@@ -35,8 +35,10 @@ export default class LoginCtrl extends Controller {
       var login_session = JSON.parse(result.content).login_session;
       console.log("login_session is " + login_session);
 
+      // TODO: check we're logged in from response (example of bad login response: result is {"status":{"code":100,"desc":"bad username or email","fields":{"email_or_username":"bad username or email"},"name":"INPUT_ERROR"}}
+
       var bytes = [];
-      for(var i=0; i< salt.length-1; i+=2){
+      for(var i=0; i< salt.length-1; i+=2) {
           bytes.push(parseInt(salt.substr(i, 2), 16));
       }
       var binarySalt = String.fromCharCode.apply(String, bytes);
